@@ -9,7 +9,7 @@ export class Cart {
     this.detailaddtocartpage = page.locator("#add-to-cart");
     this.productnmae = page.locator("#item_4_title_link");
     this.removebackpack = page.locator("#remove-sauce-labs-backpack");
-    this.bedge = page.locator(".shopping_cart_badge");
+    this.bedge = page.locator(".shopping_cart_badge");//
   }
 
   async addtocartb() {

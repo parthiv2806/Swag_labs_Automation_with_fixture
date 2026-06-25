@@ -1,10 +1,5 @@
-import { test } from "../fixtures/baseFixture";
-
-test("Checkout", async ({ lgpage, Homepage, Cartpage, Checkout }) => {
-  await lgpage.open();
-  await lgpage.login("standard_user", "secret_sauce");
-  await lgpage.verify_home_Page();
-
+import { test } from "../fixtures/authFixture";
+test("Checkout", async ({ loggedIn, Homepage, Cartpage, Checkout }) => {
   await Cartpage.addtocartb();
   await Homepage.openCart();
   await Checkout.checkoutpage();
@@ -12,11 +7,7 @@ test("Checkout", async ({ lgpage, Homepage, Cartpage, Checkout }) => {
   await Checkout.error_message("Error: First Name is required");
 });
 
-test("Checkout 1", async ({ lgpage, Homepage, Cartpage, Checkout }) => {
-  await lgpage.open();
-  await lgpage.login("standard_user", "secret_sauce");
-  await lgpage.verify_home_Page();
-
+test("Checkout 1", async ({ loggedIn, Homepage, Cartpage, Checkout }) => {
   await Cartpage.addtocartb();
   await Homepage.openCart();
   await Checkout.checkoutpage();
@@ -25,11 +16,7 @@ test("Checkout 1", async ({ lgpage, Homepage, Cartpage, Checkout }) => {
   await Checkout.error_message("Error: Last Name is required");
 });
 
-test("Checkout 2", async ({ lgpage, Homepage, Cartpage, Checkout }) => {
-  await lgpage.open();
-  await lgpage.login("standard_user", "secret_sauce");
-  await lgpage.verify_home_Page();
-
+test("Checkout 2", async ({ loggedIn, Homepage, Cartpage, Checkout }) => {
   await Cartpage.addtocartb();
   await Homepage.openCart();
   await Checkout.checkoutpage();
@@ -39,11 +26,7 @@ test("Checkout 2", async ({ lgpage, Homepage, Cartpage, Checkout }) => {
   await Checkout.error_message("Error: Postal Code is required");
 });
 
-test("Checkout 3", async ({ lgpage, Homepage, Cartpage, Checkout }) => {
-  await lgpage.open();
-  await lgpage.login("standard_user", "secret_sauce");
-  await lgpage.verify_home_Page();
-
+test("Checkout 3", async ({ loggedIn, Homepage, Cartpage, Checkout }) => {
   await Cartpage.addtocartb();
   await Homepage.openCart();
   await Checkout.checkoutpage();

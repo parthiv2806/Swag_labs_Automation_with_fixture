@@ -1,10 +1,7 @@
-import { expect } from "@playwright/test";
-import { test } from "../fixtures/baseFixture";
+import { test } from "../fixtures/authFixture";
 
-test("Home_page_visiblity", async ({ lgpage, Homepage }) => {
-  await lgpage.open();
-  await lgpage.login("standard_user", "secret_sauce");
-  await lgpage.verify_home_Page();
+test("Home_page_visiblity", async ({ loggedIn, Homepage }) => {
+
 
   await Homepage.Clikonthe_burgermenu_button();
   await Homepage.Verifythe_burgermenu_items();

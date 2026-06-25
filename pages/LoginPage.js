@@ -36,5 +36,4 @@ export class loginpage {
   async verifythe_error_message(experrormessage) {
     await expect(this.errormessage).toHaveText(experrormessage);
   }
-
 }

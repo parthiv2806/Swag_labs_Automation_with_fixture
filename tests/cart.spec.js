@@ -1,11 +1,9 @@
-import { test } from "../fixtures/baseFixture";
+import { test } from "../fixtures/authFixture"
 
 
-test("cart", async ({ lgpage, Homepage, Cartpage }) => {
-  await lgpage.open();
-  await lgpage.login("standard_user", "secret_sauce");
-  await lgpage.verify_home_Page();
-
+test("cart", async ({ loggedIn, Homepage, Cartpage }) => {
+  // await lgpage.open();
+  //   await lgpage.login("standard_user", "secret_sauce");
   await Cartpage.addtocartb();
   await Cartpage.verifytheremovebuttonisvisible();
   await Homepage.product_main_page_verify();
